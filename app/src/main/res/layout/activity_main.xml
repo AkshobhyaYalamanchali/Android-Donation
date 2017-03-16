@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:weightSum="1"
+    android:id="@+id/activity_main"
+    tools:context="com.example.akshobhya.cardview.MainActivity">
+    <!-- A CardView that contains a TextView -->
+
+    <android.support.v7.widget.CardView
+        android:layout_height="245dp"
+        android:layout_width="190dp"
+        android:id="@+id/Card1"
+        android:layout_alignParentTop="true"
+        android:onClick="Hello1"
+        android:layout_above="@+id/Card3">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/selena"
+            android:id="@+id/imageView1"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Money"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="#FF0000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageRelative1">
+        <ImageView
+            android:id="@+id/correct1"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:adjustViewBounds="true"
+            android:clickable="false"
+            android:visibility="invisible"
+            card_view:srcCompat="@drawable/checkmark" />
+
+            <ImageView
+                android:id="@+id/wrong1"
+                android:layout_width="208dp"
+                android:layout_height="117dp"
+                android:layout_below="@+id/correct1"
+                android:clickable="true"
+                android:onClick="cancel1"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/wrong" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="245dp"
+        android:layout_width="190dp"
+        android:id="@+id/Card2"
+        android:layout_alignBottom="@+id/Card1"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/Card1"
+        android:onClick="Hello2"
+        android:layout_alignParentTop="true">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/selena"
+            android:id="@+id/imageView2"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Furniture"
+            android:textAlignment="gravity"
+            android:textSize="30dp"
+            android:textColor="#FF0000" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageRelative2">
+            <ImageView
+                android:id="@+id/correct2"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/checkmark" />
+
+            <ImageView
+                android:id="@+id/wrong2"
+                android:layout_width="208dp"
+                android:layout_height="117dp"
+                android:layout_below="@+id/correct2"
+                android:clickable="true"
+                android:onClick="cancel2"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/wrong" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="245dp"
+        android:layout_width="190dp"
+        android:id="@+id/Card3"
+        android:layout_toStartOf="@+id/Card2"
+        android:layout_alignParentBottom="true"
+        android:onClick="Hello3">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:srcCompat="@drawable/selena"
+            android:id="@+id/imageView3"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clothes"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="#FF0000"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/imageRelative3">
+            <ImageView
+                android:id="@+id/correct3"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/checkmark" />
+
+            <ImageView
+                android:id="@+id/wrong3"
+                android:layout_width="208dp"
+                android:layout_height="117dp"
+                android:layout_below="@+id/correct3"
+                android:clickable="true"
+                android:onClick="cancel3"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/wrong" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <android.support.v7.widget.CardView
+        android:layout_height="245dp"
+        android:layout_width="190dp"
+        android:id="@+id/Card4"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/Card2"
+        android:layout_toEndOf="@+id/Card1"
+        android:onClick="Hello4">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            card_view:srcCompat="@drawable/selena" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Books"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textColor="#FF0000"/>
+
+        <RelativeLayout
+            android:id="@+id/imageRelative4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/correct4"
+                android:layout_width="match_parent"
+                android:layout_height="125dp"
+                android:adjustViewBounds="true"
+                android:clickable="false"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/checkmark" />
+
+            <ImageView
+                android:id="@+id/wrong4"
+                android:layout_width="208dp"
+                android:layout_height="117dp"
+                android:layout_below="@+id/correct4"
+                android:clickable="true"
+                android:onClick="cancel4"
+                android:visibility="invisible"
+                card_view:srcCompat="@drawable/wrong" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</RelativeLayout>
